@@ -1,0 +1,12 @@
+class Book:
+    def __init__(self, name, author, genre, year):
+        self.name = name
+        self.author = author
+        self.genre = genre
+        self.year = year
+
+novel = Book("To Kill a Mockingbird", "Harper Lee", "fiction", 1960)
+history = Book("Guns, Germs, and Steel", "Jared Diamond", "history", 1997)
+
+print(f"{novel.author}: {novel.name} ({novel.year})")
+print(f"The genre of the book {history.name} is {history.genre}")
