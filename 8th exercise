@@ -1,0 +1,18 @@
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def return_first_name(self):
+        return self.name.split()[0]
+
+    def return_last_name(self):
+        return self.name.split()[-1]
+
+if __name__ == "__main__":
+    john = Person("John Doe")
+    print(john.return_first_name())
+    print(john.return_last_name())
+
+    jane = Person("Jane Smith")
+    print(jane.return_first_name())
+    print(jane.return_last_name())
