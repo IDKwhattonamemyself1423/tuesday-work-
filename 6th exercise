@@ -1,0 +1,20 @@
+class Book:
+    def __init__(self, name, author, genre, year):
+        self.name = name
+        self.author = author
+        self.genre = genre
+        self.year = year
+
+def older_book(book1: Book, book2: Book):
+    if book1.year < book2.year:
+        print(f"The older book is {book1.name} by {book1.author}, published in {book1.year}.")
+    elif book2.year < book1.year:
+        print(f"The older book is {book2.name} by {book2.author}, published in {book2.year}.")
+    else:
+        print(f"Both books were published in the same year, {book1.year}.")
+
+novel = Book("To Kill a Mockingbird", "Harper Lee", "fiction", 1960)
+history = Book("Guns, Germs, and Steel", "Jared Diamond", "history", 1997)
+
+older_book(novel, history)
+    
