@@ -1,0 +1,20 @@
+class Book:
+    def __init__(self, name, author, genre, year):
+        self.name = name
+        self.author = author
+        self.genre = genre
+        self.year = year
+
+def books_of_genre(books: list, genre: str) -> list:
+    return [book for book in books if book.genre == genre]
+
+philosophy = Book("Meditations", "Marcus Aurelius", "philosophy", 180)
+fiction = Book("1984", "George Orwell", "dystopian", 1949)
+science = Book("A Brief History of Time", "Stephen Hawking", "science", 1988)
+
+books = [philosophy, fiction, science, Book("Sapiens", "Yuval Noah Harari", "history", 2011)]
+
+print("Books in the history genre:")
+for book in books_of_genre(books, "history"):
+    print(f"{book.author}: {book.name}")
+
